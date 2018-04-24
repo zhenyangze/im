@@ -1,0 +1,13 @@
+{
+    "esversion": 6,
+        curly: true,
+        bitwise: true,
+        indent: true,
+        latedef: "nofunc",
+        "quotmark": false,
+        "undef": true,
+        "unused": true,
+        "asi": true,
+        "boss": true,
+        "evil": true,
+}
