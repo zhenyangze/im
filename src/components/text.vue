@@ -14,6 +14,7 @@ export default {
     onKeyup (e) {
       if (e.ctrlKey && e.keyCode === 13 && this.content.length) {
         this.sendMessage(this.content);
+        // this.sendMessage('http://img.zcool.cn/community/0142135541fe180000019ae9b8cf86.jpg@1280w_1l_2o_100sh.png', 'image')
         this.content = '';
       }
     }

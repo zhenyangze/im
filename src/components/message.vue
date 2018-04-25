@@ -35,7 +35,11 @@ export default {
         </p>
         <div class="main" :class="{ self: item.self }">
           <img class="avatar" width="30" height="30" :src="item.self ? user.img : session.user.img" />
-          <div class="text">{{ item.content }}</div>
+          <div class="text" v-if="item.type == 'text'">{{ item.content }}</div>
+          <div class="image" v-if="item.type == 'image'">
+            <img :src="item.content" />
+          </div>
+          <div class="face" v-if="item.type == 'face'">{{ item.content }}</div>
         </div>
       </li>
     </ul>
@@ -83,6 +87,32 @@ export default {
 
     &:before {
       content: " ";
+      position: absolute;
+      top: 9px;
+      right: 100%;
+      border: 6px solid transparent;
+      border-right-color: #fafafa;
+    }
+  }
+  .image {
+    display: inline-block;
+    position: relative;
+    padding: 0;
+    max-width: 45%;
+    min-height: 30px;
+    line-height: 2.5;
+    font-size: 12px;
+    text-align: left;
+    background-color: #fafafa;
+    border-radius: 4px;
+
+    img {
+      width: 100%;
+      max-height: 500px;
+    }
+
+    &:before {
+      content: "";
       position: absolute;
       top: 9px;
       right: 100%;

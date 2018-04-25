@@ -32,9 +32,13 @@ export default {
 
 <style lang="less" scoped>
 #app {
+  /**
   margin: 20px auto;
   width: 800px;
   height: 600px;
+  */
+  width: 100%;
+  height: ~'calc(100% - 3px)';
 
   overflow: hidden;
   border-radius: 3px;
@@ -60,7 +64,7 @@ export default {
     left: 0;
   }
   .message {
-    height: ~'calc(100% - 160px)';
+    height: ~'calc(100% - 180px)';
   }
 }
 </style>
